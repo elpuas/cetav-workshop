@@ -8,12 +8,25 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
       },
+    },
+    {
+    	resolve: `gatsby-source-wordpress`,
+    	options: {
+    		// Your WordPress source.
+    		baseUrl: `demo.wp-api.org`,
+    		protocol: `https`,
+    		// Only fetches posts, tags and categories from the baseUrl.
+    		includedRoutes: ['**/posts', '**/tags', '**/categories'],
+    		// Not using ACF so putting it off.
+    		useACF: false
+    	}
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
