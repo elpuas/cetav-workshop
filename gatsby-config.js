@@ -1,8 +1,10 @@
 module.exports = {
+  // Modifica la Metadata con tu contenido.
+  // veamos la metadat en http://localhost:8000/___graphql.
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Taller del Cetav`,
+    description: `Este taller es cortesia de Gatsby Costa Rica.`,
+    author: `@3lpu4s`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
